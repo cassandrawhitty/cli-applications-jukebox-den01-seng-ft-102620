@@ -30,8 +30,8 @@ def play(songs)
   puts "Please enter a song name or number:"
   user_input = gets.strip
   number = user_input.to_i - 1 
-  if (number == index)
-    puts "Playing #{songs[index]}"
+  if (number >= 0 && number <= songs.length - 1)
+    puts "Playing #{songs[number]}"
   elsif (user_input == song)
     puts "Playing #{user_input}"
   else
